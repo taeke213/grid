@@ -11,21 +11,42 @@ body{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    z-index: -1;
+    margin: 0;
 }
 .header{
-    background-color: aqua;
+    background-color: #f6f4f4;
+    margin-top: -10px;
     grid-area: 1 / 3 / 3 / 11;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    
+    
 }
+.header::after { 
+    content: ""; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 5px; 
+    background: transparent; 
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
+} 
 .sidebar{
     grid-area: 1 / 1 / 11 / 3;
-    background-color: rgb(0, 200, 255);
+    background-color: rgb(22, 160, 198);
     display: grid;
     grid-template-rows: 1fr 2fr 2fr;
     text-align: left;
 }
 .content{
     grid-area: 3 / 3 / 11 / 11;
-    background-color: blue;
+    background-color: rgb(231, 231, 234);
+    display: grid;
+    grid-template-columns: 4fr 2fr;
 }
 .logo, .menu1, .menu2{
     text-align: left;
@@ -60,3 +81,163 @@ body{
     content:"";
     margin-right: 10px;
 }
+.input{
+    width: 30vw;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 2vw;
+    height: 20px;
+    padding-left: -100px;
+    display: inline-block;
+}
+
+.top{
+    margin: 10px 0 0 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info{
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.info > p{
+    display: inline-block;
+    font-size: large;
+}
+.search{
+    display: flex;
+    align-items: center;
+}
+.search > img{
+    display: inline-block;
+}
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.botl{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.botl > p{
+    color: black;
+    display: inline-block;
+}
+.botl > img{
+    width: 40px;
+    height: 40px;
+}
+button{
+    background-color: rgb(22, 160, 198);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 70px;
+    margin-right: 10px;
+}
+.contentl{
+    margin-left: 20px;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.project{
+    background-color: rgb(250, 248, 248);
+    margin-left: 3px;
+    width: 23vw;
+    height: 18vh;
+    border: rgb(212, 180, 20) solid 7px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px rgb(136, 135, 135);
+    display: grid;
+    grid-template-rows: 2.5vh 1fr 28px;
+    gap: 0px;
+}
+h5{
+    margin-top: 4px;
+    margin-left: 4px;
+    font-size: 2.5vh;
+    margin-bottom: 0;
+}
+.project > p{
+    font-size: 10px;
+    margin-bottom: 0;
+    display: inline-block;
+    color: rgb(129, 128, 128);
+}
+.project > div{
+    display: inline-block;
+    margin-top: 0;
+    text-align: end;
+}
+.project > div > img{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: 0;
+    margin-left: -12px;
+}
+.contentr{
+    display: grid;
+    grid-template-rows: 0.8fr 1.5fr;
+    gap: 1vh;
+    width: 20vw;
+
+}
+.topr > div{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgb(250, 248, 248);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+.topr > div > div> p{
+    font-size: xx-small;
+    margin-top: 0;
+}
+.topr > div > div >h6{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.topr > div > div{
+    border-bottom: 1px solid rgb(229, 227, 227);
+}
+.topr > div > div:last-child{
+    border: none;
+}
+.botr > div{
+    background-color: rgb(250, 248, 248);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.botr > div > div > img{
+    display: inline-block;
+    margin-left: 5px;
+    height: 18px;
+    width: 18px;
+}
+.botr > div > div > p{
+    display: inline-block;
+}
+.botr > div > div{
+    display: flex;
+    align-items: center;
+} 
